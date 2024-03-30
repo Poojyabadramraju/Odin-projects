@@ -1,0 +1,68 @@
+body{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-family: "Crimson Pro", serif;
+    font-weight: 500;
+    background-color:antiquewhite ;
+}
+
+.page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 42px;
+    font-weight: 700;
+    color: brown;
+    padding: 10px;
+    margin: 0px;
+    gap: 50px;
+}
+
+
+.recipes img{
+    border-radius: 50%;
+    width: 200px;
+    height: 150px;
+    padding: 15px;
+}
+
+.recipes{
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.card{
+    width:350px;
+    box-shadow: 2px 4px 16px rgba(0,0,0,.06);
+    border-radius: 4px;
+    border: 1px rgb(132, 120, 120);
+    background-color: rgb(245, 156, 124);
+}
+
+
+.text a{
+    text-decoration: none;
+    color:rgb(253, 238, 212);
+    font-weight: 600;
+    font-size:25px;
+}
+
+a{
+    color: rgb(106, 106, 199);
+}
+
+
+
+
+
