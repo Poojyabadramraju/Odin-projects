@@ -148,10 +148,48 @@ ul{
     font-size: 15px;
 }
 
+.testimonials{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    gap: 30px;
+    background: linear-gradient(-225deg, #ef39a0 0%, #562B7C 52%, #2B86C5 100%);
+}
+
+.students{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding-left: 150px;
+    padding-right: 150px;
+    font-style: italic;
+    font-weight: lighter;
+    font-size: 30px;
+}
+
+.student{
+    display: flex;
+    flex-direction: column;
+}
+
+.student .name{
+    padding-top: 15px;
+    font-style: normal;
+    align-self: flex-end;
+    font-size: 25px;
+
+}
+
 .heading{
     font-size: 40px;
     font-weight: 700;
 }
+
+
 
 
 
