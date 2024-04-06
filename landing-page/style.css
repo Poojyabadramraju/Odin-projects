@@ -189,6 +189,31 @@ ul{
     font-weight: 700;
 }
 
+.action{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.action-box{
+    display: flex;
+    gap: 120px;
+    padding: 20px;
+    border-radius: 15px;
+    background: linear-gradient(-225deg, #d30b6c 0%, #7C64D5 48%, #31a4de 100%);
+}
+
+.sign-up{
+    border-radius: 10px;
+    padding: 8px 20px;
+    background: none;
+    border:2px solid rgb(249, 238, 238);
+    color: white;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
 
 
 
