@@ -4,9 +4,62 @@
     <meta charset="utf-8" />
     <title>Rock Paper Scissors</title>
     <script defer src="myscript.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body style="height: 100vh; width: 100vw; background: #fff">
-    <h1>Welcome to <span style="color: red;">Rock Paper Scissors </span>game</h1>
-    <div>What are you waiting for? Come on, let's start playing.</div>
+  <body>
+    <div class="flex flex-col justify-center items-center gap-5">
+      <div class="px-5 my-5 text-center">
+        <h1 class="text-4xl font-medium mb-2">Welcome to
+          <span class="text-blue-600">Rock</span>
+          <span class="text-green-600">Paper</span>
+          <span class="text-yellow-500">Scissors</span>
+           game
+        </h1>
+        <p class="text-xl">What are you waiting for? Come on, let's start playing.</p>
+      </div>
+      <button class="start-btn bg-red-600 px-4 py-2 text-white rounded-xl ">Start the game</button>
+      <div class="selection-container flex-col px-10 justify-center items-center hidden">
+        <h2 class="text-lg mb-1">Click on one of three selections below in each round</h2>
+        <p class="mb-10">The player who scores <span class="text-lg font-medium">5 points</span> first, wins the game</p>
+        <div class="flex gap-10 mb-6">
+          <p class="text-red-500 font-medium ">Computer Score: <span class="comp-score text-black"></span></p>
+          <p class="text-blue-500 font-medium ">Your Score: <span class="player-score text-black"></span></p>
+        </div>
+        <div class="selection-items flex gap-8">
+          <div class="rock flex-flex-col gap-2 cursor-pointer">
+            <img src="media/rock.jpeg" alt="rock hand symbol image" 
+              class="rounded-full w-24 h-24"
+            > 
+            <h3 class="text-blue-600 text-center font-medium">Rock</h3>
+          </div>
+          <div class="paper flex-flex-col gap-2 cursor-pointer">
+            <img src="media/paper.jpeg" alt="paper hand symbol image" 
+              class="rounded-full w-24 h-24"
+            > 
+            <h3 class="text-green-600 text-center font-medium">Paper</h3>
+          </div>
+          <div class="scissors flex-flex-col gap-2 cursor-pointer">
+            <img src="media/scissors.jpeg" alt="scissor hand symbol image" 
+              class="rounded-full w-24 h-24"
+            > 
+            <h3 class="text-yellow-600 text-center font-medium">Scissors</h3>
+          </div>
+          
+        </div>
+      </div>
+      <div class="results-container flex-col hidden">
+        <div class="flex gap-10">
+          <div>
+            <p class="comp-selected"></p>
+          </div>
+          <div>
+            <p class="player-selected"></p>
+          </div>
+        </div>
+        <p class="round-winner text-center"></p>
+        <p class="final-winner text-center"></p>
+      </div>
+      <button class="play-again-btn bg-red-600 px-4 py-2 text-white rounded-xl hidden">Play Again</button>
+    </div>
   </body>
 </html>
