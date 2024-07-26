@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Etch-a-Sketch</title>
+    <script defer src="myscript.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1 class="text-center text-4xl py-2 bg-red-600 text-white">
+      Etch A Sketch
+    </h1>
+    <div class="flex flex-wrap justify-center items-center w-full my-2 gap-5 px-5">
+      <button class="resize bg-orange-500 text-white px-4 py-1 rounded-lg">
+        Resize
+      </button>
+      <button class="random bg-cyan-500 text-white px-4 py-1 rounded-lg">
+        Random Colors
+      </button>
+      <div class="border border-black px-4 py-1 rounded-lg">
+        <label for="choose-event">
+          <select name="click/mouseover" id="choose-event" class="outline-none">
+            <option value="mouseover">Mouse Over</option>
+            <option value="click">Click</option>
+          </select>
+        </label>
+      </div>
+      <button class="clear bg-blue-500 text-white px-4 py-1 rounded-lg">
+        Clear
+      </button>
+      <label class="switch" title="pixel borders on/off">
+        <input name="grids on/off" type="checkbox" id="check" checked/>
+        <span class="slider round" ></span>
+      </label>
+    </div>
+    <!-- <div class="grid-container grid border-[1px] border-black mx-auto w-3/4 h-3/4 "></div> -->
+    <div class="flex max-lg:flex-col md:justify-between justify-center max-lg:items-center lg:mt-5 mt-10 px-10 gap-2">
+      <div class="px-10">
+        <label for="flexitembgcolor" class="text-center" >Select background color for the pixels:</label>
+        <input name="color" type="color" id="flexitembgcolor" name="flexitembgcolor" value="#ff0000" class="ml-2">
+      </div>
+      <div
+      class="flex-container flex flex-wrap border-[1px] justify-center items-center aspect-square border-black mx-auto max-lg:mt-10 lg:w-2/5 md:w-3/4 w-full h-auto"
+      ></div>
+    </div>
+    
+  </body>
+</html>

@@ -89,23 +89,23 @@ function playRound(playerSelection, computerSelection) {
     playScore.textContent = playerScore;
 
     if (playerScore === 5) {
-        winnerStatement.textContent = "Congratulations! you won the game";
+        winnerStatement.textContent = "Congratulations! you won the game 🎉";
         playAgainBtn.style.display = "flex";
         setTimeout(() => {
             compSelected.style.display = "none";
             playerSelected.style.display = "none";
             roundStatement.style.display = "none";
             selectionContainer.style.display = "none";
-        },2000);
+        },1500);
     } else if (computerScore === 5) {
-        winnerStatement.textContent = "OOPS! You've lost, try again";
+        winnerStatement.textContent = "OOPS! You've lost, try again 💪";
         playAgainBtn.style.display = "flex";
         setTimeout(() => {
             compSelected.style.display = "none";
             playerSelected.style.display = "none";
             roundStatement.style.display = "none";
             selectionContainer.style.display = "none";
-        },2000);
+        },1500);
     }
 
 }
