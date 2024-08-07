@@ -24,6 +24,18 @@ h1 {
   aspect-ratio: 1 / 1 ;
 }
 
+button{
+  transition: transform 200ms ease-in-out ;
+}
+
+button:hover{
+  transform: scale(1.1);
+}
+
+button:active{
+  transform: scale(0.95);
+}
+
 .switch {
   position: relative;
   display: inline-block;

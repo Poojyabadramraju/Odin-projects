@@ -2,6 +2,7 @@ const container = document.querySelector(".flex-container");
 let isRandomActive = false;
 let currentEventType = "mouseover";
 let currentColor = "red";
+const filledPixels=[];
 function resizeGrid(numOfSquares = 16) {
     let square = numOfSquares * numOfSquares;
     if (container.children.length > 0) {
@@ -36,6 +37,7 @@ function applyEventListeners() {
 
 function handleEvent(e){
     const target=e.target
+    filledPixels.push(target);
     if(isRandomActive){
         target.style.background=clrGen();
     }else{
@@ -98,10 +100,19 @@ function clearFlexItemBg() {
     });
 }
 
+function deleteFlexItemBg(){
+    if(filledPixels.length>0){
+        const lastFilledPixel=filledPixels.pop();
+        lastFilledPixel.style.background='none';
+    }
+}
+
 const randomClrBtn = document.querySelector(".random");
 randomClrBtn.addEventListener("click", changeRandomBtn);
-const clearBtn = document.querySelector(" .clear");
+const clearBtn = document.querySelector(".clear");
 clearBtn.addEventListener("click", clearFlexItemBg);
+const deleteBtn = document.querySelector(".delete");
+deleteBtn.addEventListener("click", deleteFlexItemBg);
 const flexItemBgColorInput = document.querySelector("#flexitembgcolor");
 flexItemBgColorInput.addEventListener("change", (e) => {
     currentColor=e.target.value;
